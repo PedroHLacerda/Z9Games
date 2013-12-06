@@ -39,6 +39,7 @@ public class TelaPrincipal extends JFrame {
 	private JButton btnSair;
 	private JButton btnCadastroGame;
 	private JButton btnConsultarUmJogo;
+	private JButton btnComprar;
 
 	/**
 	 * Create the frame.
@@ -83,7 +84,7 @@ public class TelaPrincipal extends JFrame {
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 
-		JButton btnComprar = new JButton("");
+		btnComprar = new JButton("comprar");
 		btnComprar.setIcon(new ImageIcon(
 				TelaPrincipal.class
 						.getResource("/br/com/z9games/gui/imagens/cart-icon (Custom).png")));
@@ -91,13 +92,19 @@ public class TelaPrincipal extends JFrame {
 		btnComprar.setBounds(466, 55, 89, 42);
 		panel_1.add(btnComprar);
 
-		btnSair = new JButton("");
+		btnSair = new JButton("sair");
 		btnSair.setIcon(new ImageIcon(
 				TelaPrincipal.class
 						.getResource("/br/com/z9games/gui/imagens/Sign-Shutdown-icon (Custom).png")));
 		btnSair.setToolTipText("Sair da Tela");
 		btnSair.setBounds(466, 11, 89, 42);
 		panel_1.add(btnSair);
+		btnSair.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+System.exit(0);				
+			}
+		});
 
 		panel_2 = new JPanel();
 		panel_2.setBorder(new TitledBorder(null, "Cliente",
@@ -116,12 +123,18 @@ public class TelaPrincipal extends JFrame {
 		panel_2.add(btnCadCliente);
 		btnCadCliente.setToolTipText("Adicionar um cliente");
 
-		btnConsultarCliente = new JButton("");
+		btnConsultarCliente = new JButton("consultar");
 		btnConsultarCliente
 				.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/br/com/z9games/gui/imagens/procurarCliente.png")));
 		btnConsultarCliente.setToolTipText("Consultar Cliente");
 		btnConsultarCliente.setBounds(109, 23, 89, 42);
 		panel_2.add(btnConsultarCliente);
+		btnConsultarCliente.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 
 		panel_3 = new JPanel();
 		panel_3.setLayout(null);

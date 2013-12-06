@@ -48,4 +48,9 @@ public class Game {
 		this.preco = preco;
 	}
 
+	
+	public String toString(){
+		return "Nome: "+getNome()+"\n Data Lançamento: "+getDataLancamento()+"\n Plataforma: "+getPlataforma()+"\n Valor: "+getPreco();
+	}
+	
 }
